@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Alex Web</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/index.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <aside>
+            <div class="nav">
+                <span class="humbergar" @click="drawDownNav"><i class="fa fa-bars fa-2x"></i></span>
+                <ul :class="{active : drawDown}">
+                    <li @click="scrollPop('about')">ABOUT</li>
+                    <li @click="scrollPop('works')">WORKS</li>
+                    <li @click="scrollPop('skill')">SKILL</li>
+                    <li @click="scrollPop('contact')">CONTACT</li>
+                </ul>
+            </div>
+        </aside>
+        <div class="wrapper">
+            <header>
+                <div class="introduction">
+                    <h1>羅士凱 Alex</h1>
+                    <p>對於新的知識感興趣
+                        <br> 樂於分享技術及各種想法
+                        <br> 嚮往可以互相成長
+                        <br> 互相學習的團隊
+                    </p>
+                </div>
+            </header>
+        </div>
+
+        <section class="about" ref="about">
+            <div class="content">
+                <div class="me">
+                    <img src="./images/me.jpg" alt="">
+                </div>
+                <div class="about__detail">
+                    <h2>關於我</h2>
+                    <p>個性開朗，隨和，幽默風趣
+                        <br>喜歡嘗試各種新事物，並應用在生活與工作上
+                        <br>覺得能寫出酷炫的網頁是一件非常有成就的事</p>
+                    <p>先放一些字在這裡
+                        <br>先放一些字在這裡
+                        <br>先放一些字在這裡
+                        <br>先放一些字在這裡
+                        <br>先放一些字在這裡
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="works" ref="works">
+            <div class="content">
+                <h2>works</h2>
+                <ul class="btns">
+                    <li @click="selectWorks('D1')">公司形象官網A</li>
+                    <li @click="selectWorks('D2')">公司形象官網B</li>
+                    <li @click="selectWorks('D3')">公司活動頁</li>
+                    <li @click="selectWorks('D4')">結訓專題</li>
+                </ul>
+                <div class="main" ref="works_main">
+                    <img v-for="pic in activeWork" :src="pic" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="skill" ref="skill">
+            <div class="content">
+                <h2>SKILL</h2>
+                <ul class="skill__card">
+                    <li>
+                        <h4>base</h4>
+                        <p>HTML5
+                            <br>CSS3、SCSS
+                            <br>RWD
+                            <br>javascript
+                        </p>
+                    </li>
+                    <li>
+                        <h4>framework / library</h4>
+                        <p>jQuery
+                            <br>Vue.js、vue-router、vuex
+                            <br>React.js
+                            <br>Canvas、p5.js
+                        </p>
+                    </li>
+                    <li>
+                        <h4>other</h4>
+                        <p>git</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact" ref="contact">
+            <ul class="content">
+                <li>
+                    <a href="https://github.com/Shikai1997" target="_blank">
+                        <i class="fab fa-github"></i> https://github.com/Shikai1997
+                    </a>
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i> zz098708150829@gmail.com
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <p>©2021 by AlexLuo</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
