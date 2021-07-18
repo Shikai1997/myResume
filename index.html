@@ -49,12 +49,8 @@
                     <h2>關於我</h2>
                     <p>個性開朗，隨和，幽默風趣
                         <br>喜歡嘗試各種新事物，並應用在生活與工作上
-                        <br>覺得能寫出酷炫的網頁是一件非常有成就的事</p>
-                    <p>先放一些字在這裡
-                        <br>先放一些字在這裡
-                        <br>先放一些字在這裡
-                        <br>先放一些字在這裡
-                        <br>先放一些字在這裡
+                        <br>覺得能寫出酷炫的網頁是一件非常有成就的事
+                        <br>假日喜歡出去亂晃，或者在家聽聽音樂
                     </p>
                 </div>
             </div>
@@ -64,10 +60,10 @@
             <div class="content">
                 <h2>works</h2>
                 <ul class="btns">
-                    <li @click="selectWorks('D1')">公司形象官網A</li>
-                    <li @click="selectWorks('D2')">公司形象官網B</li>
-                    <li @click="selectWorks('D3')">公司活動頁</li>
-                    <li @click="selectWorks('D4')">結訓專題</li>
+                    <li @click="selectWorks('D1')" :class="{ active : activeData === 'D1'}">公司形象官網A</li>
+                    <li @click="selectWorks('D2')" :class="{ active : activeData === 'D2'}">公司形象官網B</li>
+                    <li @click="selectWorks('D3')" :class="{ active : activeData === 'D3'}">公司活動頁</li>
+                    <li @click="selectWorks('D4')" :class="{ active : activeData === 'D4'}">結訓專題</li>
                 </ul>
                 <div class="main" ref="works_main">
                     <img v-for="pic in activeWork" :src="pic" alt="">

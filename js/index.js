@@ -28,6 +28,15 @@ const app = new Vue({
                     './images/works/C-6.jpeg',
                     './images/works/C-7.jpeg',
                 ],
+                D4: [
+                    './images/works/D-1.jpg',
+                    './images/works/D-2.jpg',
+                    './images/works/D-3.jpg',
+                    './images/works/D-4.jpg',
+                    './images/works/D-5.jpg',
+                    './images/works/D-6.jpg',
+                    './images/works/D-7.jpg',
+                ],
             }
         }
     },
