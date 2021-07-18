@@ -35,7 +35,6 @@ const app = new Vue({
                     './images/works/D-4.jpg',
                     './images/works/D-5.jpg',
                     './images/works/D-6.jpg',
-                    './images/works/D-7.jpg',
                 ],
             }
         }
